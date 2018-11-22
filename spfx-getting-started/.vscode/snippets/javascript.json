@@ -1,0 +1,38 @@
+/*
+     // Place your snippets for javascript.json here. Each snippet is defined under a snippet name and has a prefix, body and
+     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+     // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+     // Example:
+     "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    }
+*/
+{
+  "godbb18 - webpack extension": {
+   "prefix": "godbb18-webpack-bundle-analyzer",
+   "body": [
+    "build.configureWebpack.mergeConfig({",
+    "  additionalConfiguration: function(generatedConfiguration) {",
+    "    const lastDirName = path.basename(__dirname);",
+    "    const dropPath = path.join(__dirname, 'temp', 'stats');",
+    "    generatedConfiguration.plugins.push(new bundleAnalyzer.BundleAnalyzerPlugin({",
+    "      openAnalyzer: false,",
+    "      analyzerMode: 'static',",
+    "      reportFilename: path.join(dropPath, `${lastDirName}.stats.html`),",
+    "      generateStatsFile: true,",
+    "      statsFilename: path.join(dropPath, `${lastDirName}.stats.json`),",
+    "      logLevel: 'error'",
+    "    }));",
+    "",
+    "    return generatedConfiguration;",
+    "  }",
+    "});$1"
+   ],
+   "description": "spfx webpack analyzer snippet for spfx gulpfile. 'path' and 'webpack-bundle-analyzer' must be imported."
+  }
+ }

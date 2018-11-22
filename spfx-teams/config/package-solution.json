@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "godbsb-18-spfx-teams-client-side-solution",
+    "id": "c8081ea5-b3ae-42fc-a6cb-94b25d3ea081",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/godbsb-18-spfx-teams.sppkg"
+  }
+}

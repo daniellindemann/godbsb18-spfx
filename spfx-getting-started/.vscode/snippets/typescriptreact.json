@@ -1,0 +1,32 @@
+/*
+     // Place your snippets for typescriptreact.json here. Each snippet is defined under a snippet name and has a prefix, body and
+     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+     // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+     // Example:
+     "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    }
+*/
+{
+  "godbb18 - sharepoint items": {
+   "prefix": "godbb18-items",
+   "body": [
+    "{ this.props.items &&",
+    "  this.props.items.map(item => {",
+    "    return <tr key={item.ID}>",
+    "      <td>{item.Title}</td>",
+    "      <td>{format(item.StartDate, 'dd, DD. MMMM YYYY HH:mm', { locale: de })}</td>",
+    "      <td>{format(item.EndDate, 'dd, DD. MMMM YYYY HH:mm', { locale: de })}</td>",
+    "      <td><a href={'/add/' + item.ID} onClick={ (e) => { e.preventDefault(); this.addToCalendar(item.ID); } }>join</a></td>",
+    "    </tr>;",
+    "  })",
+    "}$1"
+   ],
+   "description": "tsx table row iterator"
+  }
+ }

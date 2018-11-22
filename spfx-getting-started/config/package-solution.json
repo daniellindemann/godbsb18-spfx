@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "event-list-web-part-client-side-solution",
+    "id": "55703304-0a52-4002-8cf5-02d66a010694",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Calendars.ReadWrite"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/event-list-web-part.sppkg"
+  }
+}

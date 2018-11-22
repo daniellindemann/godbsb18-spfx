@@ -1,0 +1,10 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.6.0",
+    "libraryName": "event-list-web-part",
+    "libraryId": "55703304-0a52-4002-8cf5-02d66a010694",
+    "environment": "spo",
+    "packageManager": "npm",
+    "isCreatingSolution": true
+  }
+}

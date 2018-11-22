@@ -1,0 +1,13 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.0",
+    "libraryName": "godbsb-18-spfx-teams",
+    "libraryId": "c8081ea5-b3ae-42fc-a6cb-94b25d3ea081",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

@@ -1,0 +1,28 @@
+/*
+     // Place your snippets for json.json here. Each snippet is defined under a snippet name and has a prefix, body and
+     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+     // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+     // Example:
+     "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    }
+*/
+{
+  "godbb18 - graph permissions": {
+   "prefix": "godbb18-graph",
+   "body": [
+    "\"webApiPermissionRequests\": [",
+    "  {",
+    "    \"resource\": \"Microsoft Graph\",",
+    "    \"scope\": \"Calendars.ReadWrite\"",
+    "  }",
+    "]$1"
+   ],
+   "description": "Graph permissions for the package-solution.json file."
+  }
+ }

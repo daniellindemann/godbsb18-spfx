@@ -1,0 +1,49 @@
+/*
+     // Place your snippets for typescript.json here. Each snippet is defined under a snippet name and has a prefix, body and
+     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+     // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+     // Example:
+     "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    }
+*/
+{
+  "Different title teams sp": {
+   "prefix": "godbb18-teamstitle",
+   "body": [
+    "let title;",
+    "if(this._msTeamsContext) {",
+    "  title = `From Teams with ❤: ${this._msTeamsContext.teamName}`;",
+    "}",
+    "else {",
+    "  title = `From SharePoint with ❤: ${this.context.pageContext.web.title}`;",
+    "}$1"
+   ],
+   "description": "Get different title"
+  },
+  "Get teams context": {
+   "prefix": "godbb18-teamsctx",
+   "body": [
+    "protected onInit() : Promise<any> {",
+    "  let promise = Promise.resolve();",
+    "",
+    "  if(this.context.microsoftTeams) {",
+    "    promise = new Promise((resolve, reject) => {",
+    "      this.context.microsoftTeams.getContext((ctx) => {",
+    "        this._msTeamsContext = ctx;",
+    "        resolve();",
+    "      });",
+    "    });",
+    "  }",
+    "",
+    "  return promise;",
+    "}$1"
+   ],
+   "description": "Gets the teams context"
+  }
+ }

@@ -1,0 +1,109 @@
+/*
+     // Place your snippets for typescript.json here. Each snippet is defined under a snippet name and has a prefix, body and
+     // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+     // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+     // Example:
+     "Print to console": {
+        "prefix": "log",
+        "body": [
+            "console.log('$1');",
+            "$2"
+        ],
+        "description": "Log output to console"
+    }
+*/
+{
+  "godbb18 - SharePoint query": {
+   "prefix": "godbb18-spquery",
+   "body": [
+    "this.context.spHttpClient.get(`${this.context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${this.options.listname}')/items?$select=${selects.join()}&$filter=${filters.join(' and ')}&$orderBy=${orders.join(',')}`, SPHttpClient.configurations.v1)",
+    "    .then((res: SPHttpClientResponse) => {",
+    "      return res.json();",
+    "    })",
+    "    .then((json) => {",
+    "",
+    "      // error occured on query",
+    "      if(json.error) {",
+    "        reject(json.error);",
+    "        return;",
+    "      }",
+    "",
+    "      resolve(json.value as IEventItem[]);",
+    "    });",
+    "});$1"
+   ],
+   "description": "SharePoint query"
+  },
+  "godbb18 - graph client new event": {
+   "prefix": "godbb18-graph-newevent",
+   "body": [
+    "client.api('me/events')",
+    ".version('v1.0')",
+    ".post({",
+    "  subject: event.Title,",
+    "  start: {",
+    "    dateTime: event.StartDate instanceof Date ? (event.StartDate as Date).toISOString() : event.StartDate,",
+    "    timeZone: 'UTC'",
+    "  },",
+    "  end: {",
+    "    dateTime: event.EndDate instanceof Date ? (event.EndDate as Date).toISOString() : event.EndDate,",
+    "    timeZone: 'UTC'",
+    "  }",
+    "})",
+    ".then((res) => {",
+    "  resolve(res);",
+    "})",
+    ".catch((err) => {",
+    "  reject(err);",
+    "});$1"
+   ],
+   "description": "Graph client action to create a date"
+  },
+  "godbb18 - mystrings labels": {
+   "prefix": "godbb18-mystrings",
+   "body": [
+    "ListNameLabel: string;",
+    "ListNameDescription: string;",
+    "ListNamePlaceholder: string;$1"
+   ],
+   "description": "webpart pane strings"
+  },
+  "godbb18 - save web part": {
+   "prefix": "godbb18-saveproperties",
+   "body": [
+    "protected get disableReactivePropertyChanges(): boolean {",
+    "  return true;",
+    "}$1"
+   ],
+   "description": "webpart function to show the apply button."
+  },
+  "godbb18 - Mock items": {
+   "prefix": "godbb18-mockitems",
+   "body": [
+    "private static Items: IEventItem[] = [{ ID: 1, Title: 'Event 01', StartDate: '2018-10-28T11:03:24Z', EndDate: '2018-10-28T12:03:24Z' },",
+    "\t{ ID: 2, Title: 'Event 02', StartDate: '2018-11-02T15:47:06Z', EndDate: '2018-11-02T16:47:06Z' },",
+    "\t{ ID: 3, Title: 'Event 03', StartDate: '2018-10-29T09:00:00Z', EndDate: '2018-10-29T10:00:00Z' },",
+    "\t{ ID: 4, Title: 'An event with an very long long long long and special title', StartDate: '2018-11-05T18:24:17Z', EndDate: '2018-11-05T19:24:17Z' },",
+    "\t{ ID: 5, Title: 'Global Office 365 Developer Bootcamp', StartDate: '2018-11-08T08:00:00Z', EndDate: '2018-11-08T16:00:00Z' }];$1"
+   ],
+   "description": "Mock data"
+  },
+  "godbb18 - SP Request Parameters": {
+   "prefix": "godbb18-spreqparams",
+   "body": [
+    "const selects = [",
+    "  'ID',",
+    "  'Title',",
+    "  'StartDate',",
+    "  'EndDate'",
+    "];",
+    "const filters = [",
+    "  `StartDate ge datetime'${new Date().toISOString()}'`",
+    "];",
+    "const orders = [",
+    "  `StartDate asc`",
+    "];$1"
+   ],
+   "description": "sp rest request params"
+  }
+ }
