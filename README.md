@@ -6,7 +6,7 @@
 
 ### Demo - Add SharePoint Framework WebPart to Teams
 
-[SharePoint Framework WebPart](./spfx-teams)
+[Teams WebPart](./spfx-teams)
 
 ## Presentation
 https://speakerdeck.com/daniellindemann/spfx-hands-on-global-office-365-developer-bootcamp-berlin
