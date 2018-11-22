@@ -21,13 +21,13 @@ More information: https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-yo
 - Upload the file `./sharepoint/solution/event-list-web-part.sppkg` to the `Apps for SharePoint` library
 - Trust the solution by clicking `Deploy`
 
-![trust solution](./assets/05_trustapp.png)
+![trust solution](../assets/05_trustapp.png)
 
 ## Approve Graph access
 - Go to the new SharePoint Admin Center
 - Under API management select the pending approval for `Calendars.ReadWrite` and click the `Approve or reject` button on the top of the page
 
-![trust solution](./assets/06_approve_graph.png)
+![trust solution](../assets/06_approve_graph.png)
 
 - Approve the app
 
@@ -42,4 +42,4 @@ More information: https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-yo
 - Edit the WebPart and set `Events` as list name
 - Have fun
 
-![WebPart](./assets/07_webpart.png)
+![WebPart](../assets/07_webpart.png)
